@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HirayaFlow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="image/banana.png" class="logo">
+        <h1>HirayaFlow</h1>
+    </header>
+
+    <nav>
+        <button onclick="goHome()">Home</button>
+        <button onclick="showCategory('groceries')">Groceries</button>
+        <button onclick="showCategory('beauty')">Beauty</button>
+        <button onclick="showCategory('men')">Men</button>
+        <button onclick="showCategory('women')">Women</button>
+        <button onclick="showCart()">Cart (<span id="cartCount">0</span>)</button>
+        <button onclick="showContact()">Contact</button>
+    </nav>
+
+    <main id="content"></main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
