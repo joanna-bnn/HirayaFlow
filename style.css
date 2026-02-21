@@ -1,66 +1,139 @@
 body {
-    font-family: Arial;
     margin: 0;
-    background: #f4f4f4;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
 }
 
 header {
-    background: #2c3e50;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1e2a38;
     color: white;
-    padding: 15px;
+    padding: 15px 30px;
+}
+
+.brand {
     display: flex;
     align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
 }
 
 .logo {
-    width: 50px;
-    margin-right: 15px;
+    height: 45px;
 }
 
-nav {
-    background: #34495e;
-    padding: 10px;
-    text-align: center;
-}
-
-nav button {
-    margin: 5px;
+.nav-buttons button {
+    margin-left: 10px;
     padding: 8px 15px;
     border: none;
     cursor: pointer;
-    background: #1abc9c;
+    background: #4CAF50;
     color: white;
     border-radius: 5px;
     transition: 0.3s;
 }
 
-nav button:hover {
-    background: #16a085;
-    transform: scale(1.05);
+.nav-buttons button:hover {
+    background: #45a049;
+}
+
+.container {
+    display: flex;
+    min-height: 90vh;
+}
+
+aside {
+    width: 220px;
+    background: white;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+}
+
+aside button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    background: #e3e8ef;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+aside button:hover {
+    background: #d0d7e2;
 }
 
 main {
-    padding: 20px;
-    animation: fadeIn 0.3s ease-in;
+    flex: 1;
+    padding: 30px;
 }
 
 .product-card {
     background: white;
     padding: 15px;
-    margin: 10px;
-    border-radius: 8px;
-    display: inline-block;
-    width: 200px;
-    text-align: center;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
     transition: 0.3s;
 }
 
 .product-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-3px);
 }
 
-button {
+.product-card button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 5px;
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.product-card button:hover {
+    background: #0056b3;
+}
+
+.cart-summary {
+    margin-top: 20px;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-summary h3 {
+    color: #1e2a38;
+}
+
+input[type="text"] {
+    padding: 8px;
+    margin-top: 10px;
+    width: 200px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.checkout-btn {
+    margin-top: 15px;
+    padding: 10px 15px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.checkout-btn:hover {
+    background: #43a047;
 }
 
 .modal {
@@ -69,7 +142,7 @@ button {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,15 +150,19 @@ button {
 
 .modal-content {
     background: white;
-    padding: 20px;
-    border-radius: 8px;
+    padding: 30px;
+    border-radius: 10px;
+    width: 320px;
+    animation: pop 0.3s ease;
 }
 
-@keyframes fadeIn {
+@keyframes pop {
     from {
+        transform: scale(0.8);
         opacity: 0;
     }
     to {
+        transform: scale(1);
         opacity: 1;
     }
 }
