@@ -1,0 +1,270 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1e2a38;
+    color: white;
+    padding: 15px 30px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo {
+    height: 45px;
+}
+
+.nav-buttons button {
+    margin-left: 10px;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    background: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.nav-buttons button:hover {
+    background: #45a049;
+}
+
+.container {
+    display: flex;
+    min-height: 90vh;
+}
+
+aside {
+    width: 220px;
+    background: white;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+}
+
+aside h3 {
+    margin-top: 0;
+}
+
+aside button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px;
+    border: none;
+    background: #e3e8ef;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+aside button:hover {
+    background: #d0d7e2;
+}
+
+main {
+    flex: 1;
+    padding: 30px;
+}
+
+main h2 {
+    margin-bottom: 10px;
+}
+
+
+/* PRODUCT GRID */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.product-card {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+    border: 1px solid #aaa;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    margin: 5px 0;
+    font-weight: normal;
+}
+
+.product-card p {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.product-card button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    background: #2f4b8f;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.product-card button:hover {
+    background: #1f3566;
+}
+
+
+/* CART SUMMARY */
+
+.cart-summary {
+    margin-top: 20px;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-summary h3 {
+    color: #1e2a38;
+}
+
+
+/* CHECKOUT FORM */
+
+.checkout-form {
+    margin-top: 20px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    max-width: 400px;
+}
+
+.checkout-form h3 {
+    margin-top: 0;
+}
+
+.checkout-form input,
+.checkout-form textarea,
+.checkout-form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.checkout-form textarea {
+    resize: vertical;
+    height: 70px;
+}
+
+.payment-method {
+    margin-top: 10px;
+}
+
+.payment-method label {
+    display: block;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+
+/* BUTTONS */
+
+.checkout-btn {
+    margin-top: 15px;
+    padding: 12px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+}
+
+.checkout-btn:hover {
+    background: #43a047;
+}
+
+
+/* MODAL RECEIPT */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 350px;
+    animation: pop 0.3s ease;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+}
+
+.modal-content button {
+    margin-top: 15px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    background: #2f4b8f;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background: #1f3566;
+}
+
+@keyframes pop {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HirayaFlow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="brand" onclick="goHome()">
+            <img src="image/banana.png" class="logo">
+            <span>HirayaFlow</span>
+        </div>
+
+        <div class="nav-buttons">
+            <button onclick="showCart()">🛒 Cart (<span id="cartCount">0</span>)</button>
+            <button onclick="showContact()">Contact</button>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <aside>
+            <h3>Categories</h3>
+
+            <button onclick="showCategory('groceries')">
+                Groceries
+            </button>
+
+            <button onclick="showCategory('beauty')">
+                Beauty
+            </button>
+
+            <button onclick="showCategory('men')">
+                Men
+            </button>
+
+            <button onclick="showCategory('women')">
+                Women
+            </button>
+
+        </aside>
+
+        <main id="content">
+
+            <h2>Welcome to HirayaFlow</h2>
+            <p>Select a category to start shopping.</p>
+
+        </main>
+
+    </div>
+
+    <div id="checkoutModal" class="modal" style="display:none;">
+        <div class="modal-content">
+
+            <h2>Checkout Information</h2>
+
+            <label>Full Name:</label><br>
+            <input type="text" id="customerName" placeholder="Enter your full name"><br><br>
+
+            <label>Address:</label><br>
+            <input type="text" id="customerAddress" placeholder="Enter your address"><br><br>
+
+            <label>Cellphone Number:</label><br>
+            <input type="text" id="customerPhone" placeholder="Enter your cellphone number"><br><br>
+
+            <label>Note to Seller:</label><br>
+            <input type="text" id="customerNote" placeholder="Optional note"><br><br>
+
+            <button onclick="confirmCheckout()">Confirm Order</button>
+            <button onclick="closeCheckout()">Cancel</button>
+
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
